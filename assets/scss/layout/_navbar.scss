@@ -1,0 +1,107 @@
+
+//vista escritorio
+.navbar {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: $white;
+}
+.logo {
+    height: 40px;
+    width: 40px;
+    background-image: url("../img/Logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: $medium;
+    margin-right: 20px;
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    &__menu-lista {
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 15px;
+        }
+        li:hover {
+          color: $nickel;
+        }
+    }
+    &__acction {
+        display: flex;
+        align-items: center;
+    
+        &__action-lista {
+            display: flex;
+            align-items: center;
+            li {
+                margin-right: 15px;
+            }
+            li:hover {
+                color: $nickel;
+            }
+        }
+    }
+}
+.dropdown {
+    display:none;
+}
+
+
+// vista mobile 
+
+@include respond-to($bp-md) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navegacion{
+            display:none;
+        }
+    }
+}
+
+.dropdown {
+    display: flex;
+    margin-right: 25px;
+    margin-top: 10px;
+    font-size: $large;
+    overflow: hidden;
+    font-size: $small;
+
+    & #mylinks {
+        display: none;
+    }
+
+    & .lista {
+        margin-right: 20px;
+        width: 500px;
+        -webkit-box-shadow: 4px 7px 5px -3px rgba(145, 132, 145, 0.18);
+        -moz-box-shadow: 4px 7px 5px -3px rgba(145, 132, 145, 0.18);
+        box-shadow: 4px 7px 5px -3px rgba(145, 132, 145, 0.18);
+
+        li {
+          display: flex;
+          flex-direction: column;
+          padding: 14px 16px;
+          border-bottom: $gray-dk;
+        }
+
+        li:hover {
+          color: $nickel;
+        }
+    }
+}

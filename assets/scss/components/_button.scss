@@ -1,0 +1,43 @@
+.button {
+    padding: 0.7rem 2rem;
+    font-size: 12px;
+    color: white;
+    background-color: darkorchid;
+  
+    &_regular {
+      padding: 0.6rem 1rem;
+      color: $white;
+      background-color: $blue;
+      border-width: 0;
+      letter-spacing: 0.1em;
+      font-size: $small;
+      font-weight: $bold;
+
+      &:hover {
+        background-color: $blue-lg;
+      }
+      &:focus {
+        background-color: $gray-lile;
+      }
+    }
+  
+    &_large {
+      padding: 0.8rem 5rem;
+      border-width: 0;
+      letter-spacing: 0.1em;
+      font-size: $small;
+      font-weight: $bold;
+      background-color: $blue;
+      &:hover {
+        background-color: $blue-lg;
+      }
+      &:focus {
+        background-color: $gray-lile;
+      }
+  
+      @include respond-to($bp-md){
+        padding: 0.8rem 1rem;
+      }
+    }
+}
+  
